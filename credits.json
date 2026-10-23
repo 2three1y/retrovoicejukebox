@@ -1,0 +1,88 @@
+{
+  "project": "Retro Voice Jukebox",
+  "license": "MIT",
+  "author": "Carter (2three1y)",
+  "credits": [
+    {
+      "name": "SharpVox",
+      "repo": "https://github.com/dectalk/SharpVoxTTS",
+      "author": "ByteSizedFox (dectalk org)",
+      "license": "MIT",
+      "used_for": "every voice on the site: the formant (Klatt-style) speech engine, compiled to WebAssembly",
+      "notice": "Copyright (c) 2026 ByteSizedFox. Full text in licenses/SharpVoxTTS-MIT.txt. Changed files listed in NOTICE.",
+      "shipped": true,
+      "starred": "checked Oct 23, 2026"
+    }
+  ],
+  "linked_not_shipped": [
+    {
+      "name": "smoothTalker-sbaitso",
+      "repo": "https://github.com/joshknnd1982/smoothTalker-sbaitso",
+      "license": "MIT for the NVDA add-on code",
+      "why": "The real Dr. Sbaitso / First Byte SmoothTalker voice. It works by running the original 1990 DOS engine file under a CPU emulator. That engine is not open source, so it can't be shipped here."
+    },
+    {
+      "name": "softvoice-sapi5",
+      "repo": "https://github.com/joshknnd1982/softvoice-sapi5",
+      "license": "MIT for the wrapper code",
+      "why": "The real 1997 SoftVoice voices for Windows. The engine itself is the original SoftVoice DLL files, which are not open source, so they can't be shipped here."
+    },
+    {
+      "name": "DECtalk",
+      "repo": "https://github.com/dectalk/dectalk",
+      "license": "No standard license GitHub can read",
+      "why": "Modern builds of the classic DECtalk. Linked only."
+    },
+    {
+      "name": "DECtalkMini",
+      "repo": "https://github.com/dectalk/DECtalkMini",
+      "license": "No license",
+      "why": "A portable DECtalk. Linked only."
+    },
+    {
+      "name": "DECtalk 4.63 source",
+      "repo": "https://github.com/dectalk/463",
+      "license": "No license",
+      "why": "Linked only."
+    },
+    {
+      "name": "Lintalker",
+      "repo": "https://github.com/dectalk/lintalker",
+      "license": "No license",
+      "why": "Another synthesizer from the same group. Linked only."
+    },
+    {
+      "name": "DECTalkApple",
+      "repo": "https://github.com/masonasons/DECTalkApple",
+      "license": "No license",
+      "why": "DECtalk as a Mac and iPhone system voice. Linked only."
+    },
+    {
+      "name": "eSpeak NG",
+      "repo": "https://github.com/espeak-ng/espeak-ng",
+      "license": "GPL-3.0",
+      "why": "A great open source engine. Using it would make the whole jukebox GPL, so this version leaves it out. Could be added later as a GPL build."
+    },
+    {
+      "name": "NVSpeechPlayer",
+      "repo": "https://github.com/nvaccess/NVSpeechPlayer",
+      "license": "No license file GitHub can read",
+      "why": "A Klatt-based engine from NV Access. Linked only."
+    },
+    {
+      "name": "retro-tts-pack",
+      "repo": "https://github.com/devinprater/retro-tts-pack",
+      "license": "No license",
+      "why": "Retro synthesizers for Linux. Linked only."
+    },
+    {
+      "name": "alexclassic",
+      "repo": "https://github.com/2three1y/alexclassic",
+      "license": "MIT",
+      "why": "Carter's own project preserving the classic Mac Alex voice. It has no engine code yet."
+    }
+  ],
+  "not_in_stars": [
+    "No JavaScript port of SAM (Software Automatic Mouth) is in the starred list, so SAM is not included."
+  ]
+}

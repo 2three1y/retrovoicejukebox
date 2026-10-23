@@ -1,0 +1,25 @@
+Retro Voice Jukebox
+Copyright (c) 2026 Carter (2three1y). MIT License, see LICENSE.
+
+This project includes a WebAssembly build of SharpVox:
+  SharpVox, https://github.com/dectalk/SharpVoxTTS
+  Copyright (c) 2026 ByteSizedFox
+  MIT License, full text in licenses/SharpVoxTTS-MIT.txt
+  Built from commit 62528bcb0fd04869116bac145ed1a8b0fcb7749c (Oct 21, 2026).
+
+Files changed from upstream SharpVox for this build (the wasm build has no C++
+exceptions, so try/catch/throw and std::stoi/stof/stoll calls were replaced with
+exception-free equivalents; behaviour is otherwise the same):
+- src/KlattschParser.cpp
+- src/DictionaryReader.cpp
+- src/KlattSynthesizerFP.cpp
+- src/SpeechRenderer.cpp
+- src/TextCommands.cpp
+- src/Phonemizer.cpp
+- platform/lib/SharpVox.cpp
+The full diff is in build/sharpvox-jukebox.patch. New file: build/sv_c.cpp
+(a small C wrapper exported to JavaScript). The Japanese dictionary is not
+included in this build.
+
+No other third-party code is included. The effects, page and loader are
+original to this project.

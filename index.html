@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retro Voice Jukebox</title>
+<meta name="description" content="Type something and hear it in old-school formant computer voices, right in your browser. By Carter (2three1y).">
+<link rel="stylesheet" href="styles.css">
+<link rel="modulepreload" href="js/app.js">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the jukebox</a>
+<header class="masthead">
+  <p class="eyebrow">Carter (2three1y) presents</p>
+  <h1>Retro Voice Jukebox</h1>
+  <p class="tagline">Type anything. Hear it in old-school computer voices. Everything runs in your browser.</p>
+</header>
+
+<main id="main">
+  <section aria-labelledby="say-h" class="panel">
+    <h2 id="say-h">What should it say?</h2>
+    <label for="text">Text to speak</label>
+    <textarea id="text" rows="4" maxlength="3000" spellcheck="true">Hello! I am a formant speech synthesizer. Welcome to the retro voice jukebox.</textarea>
+    <p class="hint" id="text-hint">Shortcut: Control or Command plus Enter speaks, Escape stops.</p>
+    <div class="controls">
+      <button type="button" id="speak" class="big primary" disabled>Speak</button>
+      <button type="button" id="stop" class="big">Stop</button>
+      <button type="button" id="save" class="big" disabled>Save as WAV</button>
+    </div>
+    <p id="engine-state" class="state">Loading the voice engine…</p>
+  </section>
+
+  <section aria-labelledby="presets-h" class="panel">
+    <h2 id="presets-h">Presets</h2>
+    <p class="hint">Pick one and it says its own name in that voice.</p>
+    <fieldset class="presets">
+      <legend class="visually-hidden">Voice preset</legend>
+      <div id="preset-list"></div>
+    </fieldset>
+    <div class="check">
+      <input type="checkbox" id="say-names" checked>
+      <label for="say-names">Say preset names when I pick one</label>
+    </div>
+  </section>
+
+  <section aria-labelledby="tune-h" class="panel">
+    <h2 id="tune-h">Fine-tune</h2>
+    <div class="grid">
+      <div class="field">
+        <label for="voice">Voice</label>
+        <select id="voice"></select>
+      </div>
+      <div class="field">
+        <label for="effect">Effect</label>
+        <select id="effect"></select>
+        <p class="hint" id="effect-about"></p>
+      </div>
+      <div class="field">
+        <label for="pitch">Pitch</label>
+        <input type="range" id="pitch" min="50" max="400" step="5" value="121">
+        <output id="pitch-out" for="pitch" aria-hidden="true">121 Hz</output>
+      </div>
+      <div class="field">
+        <label for="rate">Speed</label>
+        <input type="range" id="rate" min="80" max="450" step="5" value="158">
+        <output id="rate-out" for="rate" aria-hidden="true">158 words per minute</output>
+      </div>
+    </div>
+    <div class="check">
+      <input type="checkbox" id="device-voice">
+      <label for="device-voice">Use my device's own voice instead (no retro effects)</label>
+    </div>
+    <p class="hint">Your device voice comes from the browser's speech system, and browsers don't let a page add effects to it. Pitch and speed still work.</p>
+  </section>
+
+  <section aria-labelledby="fun-h" class="panel">
+    <h2 id="fun-h">Secret tricks</h2>
+    <p>The engine understands a few commands inside your text. Try pasting these:</p>
+    <ul class="tricks">
+      <li><button type="button" class="trick" data-text="I will sing now. [dow<500,C4>rey<500,D4>miy<500,E4>fah<500,F4>sow<500,G4>lah<500,A4>tiy<500,B4>dow<500,C5>].">Sing a scale</button></li>
+      <li><button type="button" class="trick" data-text="Count down. 10, 9, 8, 7, 6, 5, 4, 3, 2, 1. Lift off!">Countdown</button></li>
+      <li><button type="button" class="trick" data-text="It is 1995. My computer has 8 megabytes of memory, a 486 processor, and a sound card. Please insert disk 2.">1995 mode</button></li>
+      <li><button type="button" class="trick" data-text="Hello, I am your computer. Please tell me about your problems.">Therapist tribute</button></li>
+    </ul>
+    <p class="hint">Picking a trick puts its text in the box above. Then press Speak.</p>
+  </section>
+
+  <section aria-labelledby="about-h" class="panel">
+    <h2 id="about-h">About the voices</h2>
+    <p>Every voice here comes from SharpVox, an open source formant synthesizer in the DECtalk tradition (MIT license), compiled to run in your browser. The effects are written for this site.</p>
+    <p>The original Dr. Sbaitso, SoftVoice, SAM and DECtalk engines are not here: their code is proprietary or has no open license, so they can't be shipped on a website. The preset called Sound Card '91 is a tribute, not the real thing. The credits page links every one of them.</p>
+    <p><a href="credits.html">Starred credits and licenses</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>Made by Carter (2three1y). Built only from repos he starred. <a href="https://github.com/2three1y/retro-voice-jukebox">Source on GitHub</a>.</p>
+</footer>
+
+<div id="announcer" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+<audio id="player" preload="none"></audio>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
