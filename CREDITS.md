@@ -68,7 +68,7 @@ These are the classic voices that inspired the jukebox. Their engines are propri
 ### alexclassic
 - Repo: https://github.com/2three1y/alexclassic
 - License: MIT
-- Why it is not shipped: Carter's own project preserving the classic Mac Alex voice. It has no engine code yet.
+- Why it is not shipped: My own project preserving the classic Mac Alex voice. It has no engine code yet.
 
 ## Not in the stars
 

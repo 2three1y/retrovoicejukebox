@@ -79,7 +79,7 @@
       "name": "alexclassic",
       "repo": "https://github.com/2three1y/alexclassic",
       "license": "MIT",
-      "why": "Carter's own project preserving the classic Mac Alex voice. It has no engine code yet."
+      "why": "My own project preserving the classic Mac Alex voice. It has no engine code yet."
     }
   ],
   "not_in_stars": [

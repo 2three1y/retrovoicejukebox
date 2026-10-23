@@ -2,7 +2,7 @@
 
 Type anything and hear it in old-school formant computer voices, right in the browser. No account, no server, works with VoiceOver.
 
-Live: https://2three1y.github.io/retro-voice-jukebox/
+Live: https://2three1y.github.io/retrovoicejukebox/
 
 ## What it does
 - 13 presets, each says its own name when you pick it: Sound Card '91, Klatt John, Klatt Beth, Robot Overlord, Arcade Cabinet, Telephone Operator, Walkie-Talkie, Space Station and more.
